@@ -7,17 +7,17 @@ public class MyStack<E> extends  ArrayList<E> {
     ArrayList<E> delegate;
 
     public MyStack() {
-        delegate = this;
+        delegate = new ArrayList();
     }
 
     public void push(E e) {
-        add(e);
+        delegate.add(e);
     }
 
     public E pop() {
         if (isEmpty()) throw new EmptyStackException();
-        E e = get(size() - 1);
-        remove(size() -1 );
+        E e = delegate.get(size() - 1);
+        delegate.remove(size() -1 );
         return e;
     }
 
@@ -27,7 +27,7 @@ public class MyStack<E> extends  ArrayList<E> {
         delegate.add(e);
         return true;
     }*/
-   /* public boolean isEmpty()
+    public boolean isEmpty()
     {
         return delegate.isEmpty();
     }
@@ -35,7 +35,7 @@ public class MyStack<E> extends  ArrayList<E> {
     public int size()
     {
         return delegate.size();
-    }*/
+    }
 
   /*  public E remove(int size)
     {
