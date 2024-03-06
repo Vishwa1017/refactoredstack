@@ -8,6 +8,10 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        MyStack myStack = new MyStack();
+
+        myStack.push(0);
+        myStack.push(1);
+        System.out.println(myStack.pop());
     }
 }

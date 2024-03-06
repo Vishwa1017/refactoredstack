@@ -35,4 +35,11 @@ public class AppTest
     {
         assertTrue( true );
     }
+    public void testInitalFunctionalities()
+    {
+        MyStack myStack = new MyStack();
+        myStack.push(5);
+        myStack.push(6);
+        assertEquals(6,myStack.pop());
+    }
 }
