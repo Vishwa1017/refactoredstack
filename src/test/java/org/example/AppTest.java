@@ -4,6 +4,8 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
+import java.util.EmptyStackException;
+
 /**
  * Unit test for simple App.
  */
@@ -41,5 +43,13 @@ public class AppTest
         myStack.push(5);
         myStack.push(6);
         assertEquals(6,myStack.pop());
+    }
+
+    public void testAfterDelegationVariable()
+    {
+        MyStack myStack = new MyStack();
+        myStack.push(5);
+        myStack.push(8);
+        assertEquals(8,myStack.pop());
     }
 }

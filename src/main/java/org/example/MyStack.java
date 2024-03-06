@@ -5,6 +5,10 @@ import java.util.EmptyStackException;
 
 public class MyStack<E> extends ArrayList<E> {
 
+    public void MyStack()
+    {
+        ArrayList<E> arrayList = new ArrayList<>(); //delegation
+    }
     public void push(E e) {
         add(e);
     }

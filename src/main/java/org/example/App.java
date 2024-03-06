@@ -10,8 +10,6 @@ public class App
     {
         MyStack myStack = new MyStack();
 
-        myStack.push(0);
-        myStack.push(1);
         System.out.println(myStack.pop());
     }
 }
