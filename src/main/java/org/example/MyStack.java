@@ -1,13 +1,13 @@
 package org.example;
 
-import java.util.ArrayList;
 import java.util.EmptyStackException;
+import java.util.*;
 
-public class MyStack<E> {
+public class MyStack<E> extends  ArrayList<E> {
     ArrayList<E> delegate;
 
     public MyStack() {
-        delegate = new ArrayList<>();
+        delegate = this;
     }
 
     public void push(E e) {
@@ -22,11 +22,11 @@ public class MyStack<E> {
     }
 
 
-    public boolean add(E e)
+    /*public boolean add(E e)
     {
         delegate.add(e);
         return true;
-    }
+    }*/
     public boolean isEmpty()
     {
         return delegate.isEmpty();
@@ -37,14 +37,14 @@ public class MyStack<E> {
         return delegate.size();
     }
 
-    public E remove(int size)
+  /*  public E remove(int size)
     {
         return delegate.remove(size);
     }
-
-    private E get(int size) {
+*/
+   /* public E get(int size) {
         return delegate.get(size);
-    }
+    }*/
 
 
 }
