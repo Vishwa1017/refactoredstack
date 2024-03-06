@@ -27,7 +27,7 @@ public class MyStack<E> extends  ArrayList<E> {
         delegate.add(e);
         return true;
     }*/
-    public boolean isEmpty()
+   /* public boolean isEmpty()
     {
         return delegate.isEmpty();
     }
@@ -35,7 +35,7 @@ public class MyStack<E> extends  ArrayList<E> {
     public int size()
     {
         return delegate.size();
-    }
+    }*/
 
   /*  public E remove(int size)
     {
