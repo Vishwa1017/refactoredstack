@@ -4,11 +4,12 @@ import java.util.ArrayList;
 import java.util.EmptyStackException;
 
 public class MyStack<E> extends ArrayList<E> {
+    ArrayList<E> delegate;
 
-    public void MyStack()
-    {
-        ArrayList<E> arrayList = new ArrayList<>(); //delegation
+    public MyStack() {
+        delegate = this;
     }
+
     public void push(E e) {
         add(e);
     }
