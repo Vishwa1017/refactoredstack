@@ -3,7 +3,7 @@ package org.example;
 import java.util.ArrayList;
 import java.util.EmptyStackException;
 
-public class MyStack<E> extends ArrayList<E> {
+public class MyStack<E> {
     ArrayList<E> delegate;
 
     public MyStack() {
@@ -11,15 +11,16 @@ public class MyStack<E> extends ArrayList<E> {
     }
 
     public void push(E e) {
-        delegate.add(e);
+        add(e);
     }
 
     public E pop() {
-        if (delegate.isEmpty()) throw new EmptyStackException();
-        E e = delegate.get(size() - 1);
-        delegate.remove(size() -1 );
+        if (isEmpty()) throw new EmptyStackException();
+        E e = get(size() - 1);
+        remove(size() -1 );
         return e;
     }
+
 
     public boolean add(E e)
     {
@@ -40,5 +41,10 @@ public class MyStack<E> extends ArrayList<E> {
     {
         return delegate.remove(size);
     }
+
+    private E get(int size) {
+        return delegate.get(size);
+    }
+
 
 }
