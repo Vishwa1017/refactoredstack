@@ -52,4 +52,13 @@ public class AppTest
         myStack.push(8);
         assertEquals(8,myStack.pop());
     }
+
+    public void testAfterCreationOfDelgationMethods()
+    {
+        MyStack myStack = new MyStack();
+        myStack.add(5);
+        myStack.add(8);
+        myStack.remove(1);
+        assertEquals(5,myStack.remove(0));
+    }
 }
